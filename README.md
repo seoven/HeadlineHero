@@ -1,13 +1,5 @@
-没问题！根据你提供的真实项目结构（tree 输出），我为你重新生成了精准的 README.md。
 
-主要调整点：
-目录结构：完全匹配你的 TouManFen 文件夹布局，包括 data/raw_data (原始分片), data/divided_data, data/processed_data 等。
-配置文件：指明使用 config.yml 而不是 Python 配置文件。
-日志系统：增加了 logs/ 目录的说明，涵盖数据清洗、训练、评估和 API 日志。
-模块划分：准确描述了 src/data/ 下的数据处理模块 (clean.py, split_data.py 等) 和核心逻辑 (trainer.py, evaluate.py)。
-启动方式：修正为根目录下的 serve.py。
-
-📰 TouManFen: 基于 BERT 的新闻文本自动分类系统
+📰 HeadlineHero: 基于 BERT 的新闻文本自动分类系统
 
 本项目是一个完整的端到端新闻文本分类解决方案。它使用 HuggingFace Transformers (BERT) 作为底座模型，在自定义新闻数据集上进行微调，并通过 FastAPI 提供高性能的 RESTful API 服务。
 
