@@ -1,0 +1,62 @@
+# Python 通用忽略
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+pip-wheel-metadata/
+
+# 虚拟环境
+venv/
+env/
+*.env
+.conda/
+
+# 数据文件（大文件不上传，仅保留数据结构说明）
+data/raw_data/
+data/processed_data/
+data/divided_data/
+
+# 日志文件
+# logs/
+# *.log
+
+# 模型文件（预训练模型/训练好的模型体积大，不上传）
+model/pretrained_model/
+model/saved_model/
+*.pth
+*.bin
+
+# 配置文件（若包含敏感信息，可忽略；若需共享，注释掉）
+# config.yml
+
+# 操作系统文件
+.DS_Store
+*.swp
+*.swo
+*~
+.idea/
+.vscode/
+*.bak
+*.tmp
+
+# 压缩包
+*.zip
+*.7z
+*.tar.gz

@@ -1,0 +1,54 @@
+2026-03-12 23:11:17.493 | INFO     | __main__:split_dataset:38 - ==================================================
+2026-03-12 23:11:17.493 | INFO     | __main__:split_dataset:39 - 【开始数据划分】
+2026-03-12 23:11:17.493 | INFO     | __main__:split_dataset:40 - 输入文件：/home/ds/Desktop/final_exam/TouManFen/data/processed_data/processed_data.csv
+2026-03-12 23:11:17.493 | INFO     | __main__:split_dataset:41 - 输出目录：/home/ds/Desktop/final_exam/TouManFen/data/divided_data
+2026-03-12 23:11:17.493 | INFO     | __main__:split_dataset:42 - ==================================================
+2026-03-12 23:11:17.676 | SUCCESS  | __main__:split_dataset:47 - ✅ 成功加载数据：241550 条
+2026-03-12 23:11:17.795 | INFO     | __main__:split_dataset:85 - 
+📊 划分结果概览:
+2026-03-12 23:11:17.795 | INFO     | __main__:split_dataset:86 -    训练集 (Train): 193240 条 (80.0%)
+2026-03-12 23:11:17.795 | INFO     | __main__:split_dataset:87 -    验证集 (Val):   24155 条 (10.0%)
+2026-03-12 23:11:17.795 | INFO     | __main__:split_dataset:88 -    测试集 (Test):  24155 条 (10.0%)
+2026-03-12 23:11:17.795 | INFO     | __main__:print_distribution:92 - 
+--- 训练集 类别分布 ---
+2026-03-12 23:11:17.797 | INFO     | __main__:print_distribution:101 - 类0:19262(10.0%) | 类1:19356(10.0%) | 类2:19340(10.0%) | 类3:19403(10.0%) | 类4:19369(10.0%) | 类5:19284(10.0%) | 类6:19371(10.0%) | 类7:19277(10.0%) | 类8:19276(10.0%) | 类9:19302(10.0%)
+2026-03-12 23:11:17.797 | INFO     | __main__:print_distribution:92 - 
+--- 验证集 类别分布 ---
+2026-03-12 23:11:17.797 | INFO     | __main__:print_distribution:101 - 类0:2408(10.0%) | 类1:2419(10.0%) | 类2:2417(10.0%) | 类3:2426(10.0%) | 类4:2421(10.0%) | 类5:2411(10.0%) | 类6:2421(10.0%) | 类7:2410(10.0%) | 类8:2409(10.0%) | 类9:2413(10.0%)
+2026-03-12 23:11:17.797 | INFO     | __main__:print_distribution:92 - 
+--- 测试集 类别分布 ---
+2026-03-12 23:11:17.798 | INFO     | __main__:print_distribution:101 - 类0:2408(10.0%) | 类1:2419(10.0%) | 类2:2417(10.0%) | 类3:2425(10.0%) | 类4:2421(10.0%) | 类5:2411(10.0%) | 类6:2421(10.0%) | 类7:2410(10.0%) | 类8:2410(10.0%) | 类9:2413(10.0%)
+2026-03-12 23:11:18.020 | SUCCESS  | __main__:split_dataset:120 - 
+============================================================
+2026-03-12 23:11:18.020 | SUCCESS  | __main__:split_dataset:121 - 🎉 数据划分完成！文件已保存:
+2026-03-12 23:11:18.020 | SUCCESS  | __main__:split_dataset:123 -    TRAIN  -> /home/ds/Desktop/final_exam/TouManFen/data/divided_data/train.csv
+2026-03-12 23:11:18.020 | SUCCESS  | __main__:split_dataset:123 -    VAL    -> /home/ds/Desktop/final_exam/TouManFen/data/divided_data/val.csv
+2026-03-12 23:11:18.020 | SUCCESS  | __main__:split_dataset:123 -    TEST   -> /home/ds/Desktop/final_exam/TouManFen/data/divided_data/test.csv
+2026-03-12 23:11:18.020 | SUCCESS  | __main__:split_dataset:124 - ============================================================
+2026-03-13 10:15:20.848 | INFO     | __main__:split_dataset:38 - ==================================================
+2026-03-13 10:15:20.848 | INFO     | __main__:split_dataset:39 - 【开始数据划分】
+2026-03-13 10:15:20.848 | INFO     | __main__:split_dataset:40 - 输入文件：/home/ds/Desktop/final_exam/TouManFen/data/processed_data/processed_data.csv
+2026-03-13 10:15:20.848 | INFO     | __main__:split_dataset:41 - 输出目录：/home/ds/Desktop/final_exam/TouManFen/data/divided_data
+2026-03-13 10:15:20.848 | INFO     | __main__:split_dataset:42 - ==================================================
+2026-03-13 10:15:21.026 | SUCCESS  | __main__:split_dataset:47 - ✅ 成功加载数据：241550 条
+2026-03-13 10:15:21.150 | INFO     | __main__:split_dataset:85 - 
+📊 划分结果概览:
+2026-03-13 10:15:21.151 | INFO     | __main__:split_dataset:86 -    训练集 (Train): 193240 条 (80.0%)
+2026-03-13 10:15:21.151 | INFO     | __main__:split_dataset:87 -    验证集 (Val):   24155 条 (10.0%)
+2026-03-13 10:15:21.151 | INFO     | __main__:split_dataset:88 -    测试集 (Test):  24155 条 (10.0%)
+2026-03-13 10:15:21.151 | INFO     | __main__:print_distribution:92 - 
+--- 训练集 类别分布 ---
+2026-03-13 10:15:21.152 | INFO     | __main__:print_distribution:101 - 类0:19262(10.0%) | 类1:19356(10.0%) | 类2:19340(10.0%) | 类3:19403(10.0%) | 类4:19369(10.0%) | 类5:19284(10.0%) | 类6:19371(10.0%) | 类7:19277(10.0%) | 类8:19276(10.0%) | 类9:19302(10.0%)
+2026-03-13 10:15:21.153 | INFO     | __main__:print_distribution:92 - 
+--- 验证集 类别分布 ---
+2026-03-13 10:15:21.153 | INFO     | __main__:print_distribution:101 - 类0:2408(10.0%) | 类1:2419(10.0%) | 类2:2417(10.0%) | 类3:2426(10.0%) | 类4:2421(10.0%) | 类5:2411(10.0%) | 类6:2421(10.0%) | 类7:2410(10.0%) | 类8:2409(10.0%) | 类9:2413(10.0%)
+2026-03-13 10:15:21.153 | INFO     | __main__:print_distribution:92 - 
+--- 测试集 类别分布 ---
+2026-03-13 10:15:21.154 | INFO     | __main__:print_distribution:101 - 类0:2408(10.0%) | 类1:2419(10.0%) | 类2:2417(10.0%) | 类3:2425(10.0%) | 类4:2421(10.0%) | 类5:2411(10.0%) | 类6:2421(10.0%) | 类7:2410(10.0%) | 类8:2410(10.0%) | 类9:2413(10.0%)
+2026-03-13 10:15:21.363 | SUCCESS  | __main__:split_dataset:120 - 
+============================================================
+2026-03-13 10:15:21.364 | SUCCESS  | __main__:split_dataset:121 - 🎉 数据划分完成！文件已保存:
+2026-03-13 10:15:21.364 | SUCCESS  | __main__:split_dataset:123 -    TRAIN  -> /home/ds/Desktop/final_exam/TouManFen/data/divided_data/train.csv
+2026-03-13 10:15:21.364 | SUCCESS  | __main__:split_dataset:123 -    VAL    -> /home/ds/Desktop/final_exam/TouManFen/data/divided_data/val.csv
+2026-03-13 10:15:21.364 | SUCCESS  | __main__:split_dataset:123 -    TEST   -> /home/ds/Desktop/final_exam/TouManFen/data/divided_data/test.csv
+2026-03-13 10:15:21.364 | SUCCESS  | __main__:split_dataset:124 - ============================================================

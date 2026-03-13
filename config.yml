@@ -1,0 +1,49 @@
+# config.yml
+
+# ========================= 全局配置 =========================
+seed: 42
+
+
+# ========================= 路径配置 =========================
+path:
+  raw_data: "./data/raw_data"
+  processed_data: "./data/processed_data"
+  divided_data: "./data/divided_data"
+  pretrained_model: "./model/pretrained_model"
+  saved_model: "./model/saved_model"
+  log_dir: "./logs"
+
+
+# ========================= 模型配置 ===========================
+model:
+  model_name: "bert_base_chinese"
+  max_length: 128
+  dropout: 0.1
+
+
+# ========================= 模型微调 ===========================
+finetune:
+                                  # 任务相关
+  num_labels: 10                    # 根据数据的实际类别数量修改 (例如：如果是二分类则填 2)
+
+                                  # 模型结构微调
+  hidden_dropout_prob: 0.1          # BERT 内部层的 dropout
+  classifier_dropout: 0.1           # 顶部分类层的 dropout
+
+                                  # 优化器相关 (覆盖 train 配置或作为补充)
+  warmup_ratio: 0.1                 # 学习率预热比例
+  max_grad_norm: 1.0                # 梯度裁剪阈值
+
+                                  # 保存策略
+  save_steps: 500                   # 每多少步保存一次检查点
+  evaluation_strategy: "steps"      # 评估策略: steps 或 epoch
+
+
+# ========================= 训练配置 ===========================
+train:
+  epochs: 5                  # 训练轮数
+  batch_size: 16            # 训练集 Batch Size (根据显存调整，GPU小则改小)
+  eval_batch_size: 32       # 验证/测试集 Batch Size (可以大一点)
+  lr: 2e-5                  # 学习率 (BERT 微调常用 2e-5 到 5e-5)
+  weight_decay: 0.01        # 权重衰减
+  num_workers: 4            # 数据加载线程数 (Windows 建议设为 0 以防报错)

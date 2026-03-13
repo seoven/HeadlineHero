@@ -1,0 +1,46 @@
+2026-03-13 15:58:27.376 | INFO     | __main__:main:19 - 🖥️  使用设备：cuda
+2026-03-13 15:58:27.411 | INFO     | __main__:main:21 - 🚀 GPU: NVIDIA GeForce RTX 4090
+2026-03-13 15:58:27.411 | INFO     | __main__:main:33 - 🔧 初始化分词器...
+2026-03-13 15:58:27.421 | SUCCESS  | __main__:main:35 - ✅ 分词器加载成功：bert_base_chinese
+2026-03-13 15:58:27.421 | INFO     | __main__:main:38 - 📂 构建数据集 (Dataset)...
+2026-03-13 15:58:27.602 | INFO     | __main__:main:47 - ✅ 训练集加载完成：193240 条
+2026-03-13 15:58:27.625 | INFO     | __main__:main:56 - ✅ 验证集加载完成：24155 条
+2026-03-13 15:58:27.625 | INFO     | __main__:main:59 - 🔄 构建数据加载器 (DataLoader)...
+2026-03-13 15:58:27.626 | INFO     | __main__:main:83 - ✅ DataLoader 准备就绪
+2026-03-13 15:58:27.626 | INFO     | __main__:main:86 - 🤖 构建模型架构...
+2026-03-13 15:58:28.302 | SUCCESS  | __main__:main:113 - ✅ 模型加载成功 | 总参数: 102,275,338 | 可训练: 102,275,338
+2026-03-13 15:58:28.305 | INFO     | src.trainer:__init__:33 - 📂 模型及配置将保存至：/root/autodl-tmp/TouManFen/TouManFen/model/saved_model
+2026-03-13 15:58:28.305 | INFO     | __main__:main:124 - 🚀 开始训练...
+2026-03-13 15:58:28.305 | INFO     | src.trainer:run:134 - 🚀 开始训练循环...
+2026-03-13 16:05:19.256 | INFO     | src.trainer:run:139 - 
+--- Epoch 1/5 ---
+2026-03-13 16:05:19.257 | INFO     | src.trainer:run:140 - Train | Loss: 0.4554 | Acc: 0.8600
+2026-03-13 16:05:19.257 | INFO     | src.trainer:run:141 - Val   | Loss: 0.2140 | Acc: 0.9318
+2026-03-13 16:05:19.258 | INFO     | src.trainer:_save_config:104 - 💾 模型配置已保存至：/root/autodl-tmp/TouManFen/TouManFen/model/saved_model/config.json (num_labels=10)
+2026-03-13 16:05:20.262 | SUCCESS  | src.trainer:save_checkpoint:129 - 🏆 新最佳模型已保存：best_model.pth (Val Loss: 0.2140)
+2026-03-13 16:12:12.392 | INFO     | src.trainer:run:139 - 
+--- Epoch 2/5 ---
+2026-03-13 16:12:12.392 | INFO     | src.trainer:run:140 - Train | Loss: 0.1504 | Acc: 0.9520
+2026-03-13 16:12:12.392 | INFO     | src.trainer:run:141 - Val   | Loss: 0.1528 | Acc: 0.9535
+2026-03-13 16:12:12.393 | INFO     | src.trainer:_save_config:104 - 💾 模型配置已保存至：/root/autodl-tmp/TouManFen/TouManFen/model/saved_model/config.json (num_labels=10)
+2026-03-13 16:12:14.805 | SUCCESS  | src.trainer:save_checkpoint:129 - 🏆 新最佳模型已保存：best_model.pth (Val Loss: 0.1528)
+2026-03-13 16:19:06.928 | INFO     | src.trainer:run:139 - 
+--- Epoch 3/5 ---
+2026-03-13 16:19:06.928 | INFO     | src.trainer:run:140 - Train | Loss: 0.0864 | Acc: 0.9724
+2026-03-13 16:19:06.928 | INFO     | src.trainer:run:141 - Val   | Loss: 0.1542 | Acc: 0.9585
+2026-03-13 16:19:06.929 | INFO     | src.trainer:_save_config:104 - 💾 模型配置已保存至：/root/autodl-tmp/TouManFen/TouManFen/model/saved_model/config.json (num_labels=10)
+2026-03-13 16:19:08.309 | INFO     | src.trainer:save_checkpoint:131 - 💾 检查点已保存：checkpoint_epoch_3.pth
+2026-03-13 16:26:01.516 | INFO     | src.trainer:run:139 - 
+--- Epoch 4/5 ---
+2026-03-13 16:26:01.516 | INFO     | src.trainer:run:140 - Train | Loss: 0.0492 | Acc: 0.9849
+2026-03-13 16:26:01.516 | INFO     | src.trainer:run:141 - Val   | Loss: 0.1685 | Acc: 0.9610
+2026-03-13 16:26:01.518 | INFO     | src.trainer:_save_config:104 - 💾 模型配置已保存至：/root/autodl-tmp/TouManFen/TouManFen/model/saved_model/config.json (num_labels=10)
+2026-03-13 16:26:02.669 | INFO     | src.trainer:save_checkpoint:131 - 💾 检查点已保存：checkpoint_epoch_4.pth
+2026-03-13 16:32:55.551 | INFO     | src.trainer:run:139 - 
+--- Epoch 5/5 ---
+2026-03-13 16:32:55.551 | INFO     | src.trainer:run:140 - Train | Loss: 0.0271 | Acc: 0.9922
+2026-03-13 16:32:55.551 | INFO     | src.trainer:run:141 - Val   | Loss: 0.1803 | Acc: 0.9617
+2026-03-13 16:32:55.552 | INFO     | src.trainer:_save_config:104 - 💾 模型配置已保存至：/root/autodl-tmp/TouManFen/TouManFen/model/saved_model/config.json (num_labels=10)
+2026-03-13 16:32:56.522 | INFO     | src.trainer:save_checkpoint:131 - 💾 检查点已保存：checkpoint_epoch_5.pth
+2026-03-13 16:32:56.522 | SUCCESS  | src.trainer:run:149 - 🎉 训练全部完成！
+2026-03-13 16:32:56.522 | SUCCESS  | __main__:main:126 - 🎉 训练圆满结束！
