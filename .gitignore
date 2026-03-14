@@ -61,11 +61,11 @@ model/saved_model/
 *.7z
 *.tar.gz
 
-
+# 维持结构
 !data/raw_data/.gitkeep
 !data/processed_data/.gitkeep
 !data/divided_data/.gitkeep
 !model/pretrained_model/.gitkeep
 !model/saved_model/.gitkeep
-！logs/.gitkeep
+!logs/.gitkeep
 
