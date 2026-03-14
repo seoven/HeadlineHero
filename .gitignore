@@ -34,8 +34,8 @@ data/processed_data/
 data/divided_data/
 
 # 日志文件
-# logs/
-# *.log
+ logs/
+ *.log
 
 # 模型文件（预训练模型/训练好的模型体积大，不上传）
 model/pretrained_model/

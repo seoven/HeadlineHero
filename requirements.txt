@@ -6,6 +6,7 @@ scikit-learn>=1.2.0
 # BERT 模型相关
 torch>=2.0.0
 transformers>=4.30.0
+tensorboard>=2.20.0
 
 # 工具类
 tqdm>=4.65.0
