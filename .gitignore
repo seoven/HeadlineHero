@@ -28,23 +28,27 @@ env/
 *.env
 .conda/
 
-# 数据文件（大文件不上传，仅保留数据结构说明）
-data/raw_data/
-data/processed_data/
-data/divided_data/
+# ========== 目录结构占位 ==========
+
+# 维持目录结构：保留 .gitkeep 文件
+!data/**/.gitkeep
+!model/**/.gitkeep
+!logs/.gitkeep
+
+# 数据文件（忽略内容，但保留目录和.gitkeep）
+data/raw_data/*
+data/processed_data/*
+data/divided_data/*
 
 # 日志文件
- logs/
- *.log
+logs/*
+*.log
 
-# 模型文件（预训练模型/训练好的模型体积大，不上传）
-model/pretrained_model/
-model/saved_model/
+# 模型文件
+model/pretrained_model/*
+model/saved_model/*
 *.pth
 *.bin
-
-# 配置文件（若包含敏感信息，可忽略；若需共享，注释掉）
-# config.yml
 
 # 操作系统文件
 .DS_Store
@@ -60,12 +64,3 @@ model/saved_model/
 *.zip
 *.7z
 *.tar.gz
-
-# 维持结构
-!data/raw_data/.gitkeep
-!data/processed_data/.gitkeep
-!data/divided_data/.gitkeep
-!model/pretrained_model/.gitkeep
-!model/saved_model/.gitkeep
-!logs/.gitkeep
-
