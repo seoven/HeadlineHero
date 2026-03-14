@@ -29,17 +29,17 @@ env/
 .conda/
 
 # 数据文件（大文件不上传，仅保留数据结构说明）
-data/raw_data/
-data/processed_data/
-data/divided_data/
+data/raw_data/*
+data/processed_data/*
+data/divided_data/*
 
 # 日志文件
- logs/
+ logs/*
  *.log
 
 # 模型文件（预训练模型/训练好的模型体积大，不上传）
-model/pretrained_model/
-model/saved_model/
+model/pretrained_model/*
+model/saved_model/*
 *.pth
 *.bin
 
