@@ -144,16 +144,8 @@ Content-Type: application/json
   
 
 支持的分类标签
-ID   类别名称   ID   类别名称
-0   财经   5   社会
 
-1   房产   6   国际
-
-2   股票   7   体育
-
-3   教育   8   游戏
-
-4   科技   9   娱乐
+自定义
 
 ⚙️ 配置说明 (config.yml)
 
