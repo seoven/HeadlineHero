@@ -16,7 +16,7 @@ path:
 
 # ========================= 模型配置 ===========================
 model:
-  model_name: "bert_base_chinese"
+  model_name: "bert-base-chinese"
   max_length: 128
   dropout: 0.1
 
@@ -38,10 +38,15 @@ finetune:
   save_steps: 500                   # 每多少步保存一次检查点
   evaluation_strategy: "steps"      # 评估策略: steps 或 epoch
 
+                                  # [新增] 早停配置
+  early_stopping:
+    patience: 3                     # 容忍 3 个 epoch 不提升
+    min_delta: 0.0001               # 最小改善阈值，小于此值视为未改善
+
 
 # ========================= 训练配置 ===========================
 train:
-  epochs: 5                  # 训练轮数
+  epochs: 10                  # 训练轮数
   batch_size: 16            # 训练集 Batch Size (根据显存调整，GPU小则改小)
   eval_batch_size: 32       # 验证/测试集 Batch Size (可以大一点)
   lr: 2e-5                  # 学习率 (BERT 微调常用 2e-5 到 5e-5)

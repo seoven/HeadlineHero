@@ -6,75 +6,39 @@
 ✨ 主要特性
 
 🤖 核心模型: 基于 bert-base-chinese 进行迁移学习，针对 10 类新闻场景优化。
+
 📊 完整数据流水线:
-  支持原始分片数据 (data/raw_data/*.csv) 的自动清洗与合并。
-  包含标准化的训练/验证/测试集划分 (data/divided_data/)。
-  生成统一的处理后数据 (data/processed_data/)。
+- 支持原始分片数据 (data/raw_data/*.csv) 的自动清洗与合并。
+- 包含标准化的训练/验证/测试集划分 (data/divided_data/)。
+- 生成统一的处理后数据 (data/processed_data/)。
+- 
 🎯 高精度训练:
-  模块化训练器 (src/trainer.py)，支持断点续训。
-  自动保存最佳权重 (best_model.pth) 及对应的模型配置 (config.json)。
-  独立的评估模块 (src/evaluate.py) 生成详细报告。
+- 模块化训练器 (src/trainer.py)，支持断点续训。
+- 自动保存最佳权重 (best_model.pth) 及对应的模型配置 (config.json)。
+- 独立的评估模块 (src/evaluate.py) 生成详细报告。
+
 📦 工程化部署:
-  使用 FastAPI 构建高并发 API 服务 (serve.py)。
-  自动生成 Swagger UI 文档 (/docs)。
-  支持批量预测 (Batch Prediction)。
+- 使用 FastAPI 构建高并发 API 服务 (serve.py)。
+- 自动生成 Swagger UI 文档 (/docs)。
+- 支持批量预测 (Batch Prediction)。
+
 🏷️ 智能映射: 内置标签映射机制 (src/label_map.py)，推理结果直接返回中文类别名称。
+
 ⚙️ 配置驱动: 使用 config.yml 统一管理路径、超参数和日志设置。
+
 📝 完善日志: 独立记录数据清洗、分割、训练、评估及 API 运行日志 (logs/)。
 
 📂 项目结构
 
-TouManFen/
-├── config.yml              # [核心] 全局配置文件 (路径、超参数、日志配置)
-├── requirements.txt        # Python 依赖列表
-├── serve.py                # [入口] API 服务启动脚本
-├── data/                   # 数据目录
-│   ├── raw_data/              # 原始分片数据 (data_part_1.csv ... data_part_51.csv)
-│   ├── divided_data/       # [输出] 划分后的数据集
-│   │   ├── train.csv
-│   │   ├── val.csv
-│   │   └── test.csv
-│   └── processed_data/     # [输出] 清洗合并后的完整数据
-│       └── processed_data.csv
-├── logs/                   # 日志目录
-│   ├── data_cleaning.log   # 数据清洗日志
-│   ├── data_splitting.log  # 数据划分日志
-│   ├── training.log        # 模型训练日志
-│   ├── evaluation.log      # 模型评估日志
-│   └── api.log             # API 服务运行日志
-├── model/                  # 模型存储
-│   ├── pretrained_model/   # HuggingFace 底座模型
-│   │   └── bert_base_chinese/
-│   │       ├── config.json
-│   │       ├── pytorch_model.bin
-│   │       ├── tokenizer_config.json
-│   │       └── vocab.txt
-│   └── saved_model/        # [输出] 微调成果
-│       ├── best_model.pth          # 最佳模型权重
-│       ├── checkpoint_epoch_x.pth  # 历史检查点
-│       └── config.json             # 微调后的模型配置 (含 num_labels)
-└── src/                    # 源代码包
-    ├── init.py
-    ├── config.py           # 配置加载工具 (读取 config.yml)
-    ├── label_map.py        # 标签 ID  中文名称 映射
-    ├── trainer.py          # 核心训练逻辑
-    ├── train.py            # 训练入口脚本 (调用 trainer)
-    ├── evaluate.py         # 评估入口脚本
-    ├── evaluator.py        # 评估逻辑实现
-    ├── api_service.py      # 推理服务封装 (单例模式)
-    └── data/               # 数据处理子模块
-        ├── clean.py        # 数据清洗逻辑
-        ├── split_data.py   # 数据集划分逻辑
-        ├── dataset.py      # PyTorch Dataset 定义
-        └── loader.py       # DataLoader 封装
+略...
 
 🚀 快速开始
 
 模型下载
 
-由于模型文件较大，已放在百度网盘，下载 HeadlineHero/ 文件夹下的 model.zip 压缩文件
-（必须项）：将解压后的目录中的 pretrained_model/ 文件夹整个替代项目文件夹下的同名文件夹即可得到基座预训练模型
-（可选项）：将解压后的 saved_model/ 文件夹整个替代项目文件夹下的同名文件夹即可获得原项目训练和微调好的模型。或不选择替换，则需要自己跑一遍训练和评估过程，即运行 train.py 文件
+由于模型文件较大，已放在百度网盘，下载 HeadlineHero/ 文件夹下的 model.zip 压缩文件\
+（必须项）：将解压后的目录中的 pretrained_model/ 文件夹整个替代项目文件夹下的同名文件夹即可得到基座预训练模型\
+（可选项）：将解压后的 saved_model/ 文件夹整个替代项目文件夹下的同名文件夹即可获得原项目训练和微调好的模型。或不选择替换，则需要自己跑一遍训练和评估过程，即运行 train.py 文件\
 百度网盘下载链接：
 
 环境准备
@@ -90,6 +54,22 @@ path.pretrained_model: 指向 model/pretrained_model
 path.saved_model: 指向 model/saved_model
 path.data_raw: 指向 data/raw_data
 path.data_divided: 指向 data/divided_data
+
+数据格式
+
+准备 *.csv 文件放置于 data/raw_data/ 文件夹下，格式如下：
+```csv
+title,label
+中国十大魅力古镇之福建泰宁 中国十大魅力古镇之福建泰宁,1
+国家旅游局未出现大规模游客滞留现象,6
+```
+并根据你需要训练的类别，
+将具体的类别名称填写入 data/raw_data/labels.txt 文件中，
+将类别的数量填入 config.yml 的 num_labels 值中，如下
+```yml
+finetune:
+  num_labels: 10      # 根据你的类别数量填写
+```
 
 数据预处理 (可选)
 
